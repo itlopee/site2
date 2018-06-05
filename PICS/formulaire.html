@@ -1,0 +1,94 @@
+<!Doctype html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fnom"].value;
+    var y = document.forms["myForm"]["fprenom"].value;
+    var z = document.forms["myForm"]["fadresse"].value;
+    var k = document.forms["myForm"]["fdate"].value;
+    var m = document.forms["myForm"]["ftelephone"].value;
+    var s = document.forms["myForm"]["fpays"].value;
+    var t = document.forms["myForm"]["fville"].value;
+    var o = document.forms["myForm"]["fcode"].value;
+    var e = document.forms["myForm"]["fparfum"].value;
+   
+
+
+    if (x == "") {
+        alert("nom manquant");
+        return false;
+    } 
+  if (y=="") {
+   alert ("prenom manquant");
+   return false;
+}
+if (z=="") {
+   alert ("adresse manquante");
+   return false;
+}
+if (k=="") {
+   alert ("date manquant");
+   return false;
+}
+if (m=="") {
+   alert ("telephone manquant");
+   return false;
+
+}
+if (s=="") {
+   alert ("pays manquant");
+   return false;
+
+}
+if (t=="") {
+   alert ("ville manquante");
+   return false;
+
+}
+if (o=="") {
+   alert ("code postal manquant");
+   return false;
+
+}
+if (e=="") {
+   alert ("Veuillez choisir votre parfum");
+   return false;
+
+}
+
+if (document.forms["myForm"]["fcarte_VISA"].checked == false & document.forms["myForm"]["fcarte_Master"].checked == false & document.forms["myForm"]["fcarte_bleu"].checked == false & document.forms["myForm"]["fcarte_express"].checked == false & document.forms["myForm"]["fcarte_maestro"].checked == false & document.forms["myForm"]["fcarte_e_bleu"].checked == false ) {
+   alert ("Veuillez selectionner votre carte bancaire");
+   return false;
+
+}
+
+
+}
+
+
+</script>
+</head>
+<body background="./images/fleur.jpg" />
+<form name="myForm" action=""
+onsubmit="return validateForm()" method="post">
+<h4>Nom:</h4><input type="text" name="fnom" size="40" maxlength="18">
+<h4>Prenom:</h4><input type="text" name="fprenom"  size="40" maxlength="18" ></br></br>
+<h4>Adresse e-mail:</h4><input type="text" name="fadresse"  size="40" maxlength="18">
+<h4>Date de naissance:</h4><input type="text" name="fdate"  size="40" maxlength="18" >
+<h4>Telephone:</h4> <input type="text" name="ftelephone"  size="40" maxlength="18" >
+<h4>Pays:</h4> <input type="text" name="fpays"  size="40" maxlength="18" >
+<h4>Ville:</h4> <input type="text" name="fville"  size="40" maxlength="18" >
+<h4>Code postal:</h4> <input type="text" name="fcode"  size="40" maxlength="18" >
+<h4>Parfum choisi:</h4> <input type="text" name="fparfum"  size="40" maxlength="18" >
+<h4>Carte Bancaire :</h4>
+<input type="checkbox" id="fcarte_VISA"/>Carte VISA
+<input type="checkbox"  id="fcarte_Master"/>Mastercard
+<input type="checkbox"  id="fcarte_bleu" />Carte bleue
+<input type="checkbox" id="fcarte_express" />American express
+<input type="checkbox"  id="fcarte_maestro" />Maestro
+<input type="checkbox"  id="fcarte_e_bleu"/>e-carte bleue</br></br>
+<input type="submit" value="Valider et commander">
+</form>
+
+</body>
+</html>
